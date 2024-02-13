@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 const { Square, Triangle, Circle } = require('./lib/shapes');
 
 inquirer.prompt([
@@ -50,12 +51,23 @@ inquirer.prompt([
     }
 
     shape.setText(answers.text);
-    setColor(answers.color);
-    setBorderColor(answers.borderColor);
+    shape.setColor(answers.color);
+    shape.setBorderColor(answers.borderColor);
     // Set other properties based on user input
 
     const svgCode = shape.render();
     console.log(svgCode);
+    // Specify the file path where you want to write the SVG content
+    const filePath = './examples/output.svg';
+
+    // Write the SVG content to a file
+    fs.writeFile(filePath, svgCode, (err) => {
+        if (err) {
+            console.error('Error writing file:', err);
+        } else {
+            console.log('SVG file created successfully!');
+        }
+    });
 })
 .catch((error) => {
     console.error(error);
