@@ -29,7 +29,7 @@
   ## Usage
 
   - At the root level, run "node index"
-  - Deployed Project link -> https://github.com/ProgramerNinja/Module-10-Project
+  - Deployed Project link -> [SVG Generator](https://github.com/ProgramerNinja/SVG-Generator)
 
   - [Video Walk-Through](https://drive.google.com/file/d/1LcETWqOyEr_cLFhZvNIcvr-k4pYP5nVC/view?usp=drive_link)
 
